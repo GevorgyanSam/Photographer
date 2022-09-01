@@ -1,2 +1,2 @@
-"use strict";$((function(){const s=$(".navParent");$(window).scroll((()=>{$(window).scrollTop()>0?s.addClass("scrolled"):s.removeClass("scrolled")}));const c=$(".navItem2 a");c.click((function(){c.removeClass("active"),$(this).addClass("active")}))}));
+"use strict";$((function(){const s=$(".navParent");$(window).scroll((()=>{$(window).scrollTop()>0?s.addClass("scrolled"):s.removeClass("scrolled"),$(".mobileNavParent").css({top:$(window).scrollTop()})}));const c=$(".navItem2 a, .menuContent a");c.click((function(){c.removeClass("active"),$(this).addClass("active")}));const l=$(".navBtn"),o=$(".mobileNavParent"),e=$(".closeMobile");l.click((()=>{o.css({left:"0px"})})),e.click((()=>{o.css({left:"-1500px"})}))}));
 //# sourceMappingURL=script.js.map

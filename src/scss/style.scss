@@ -16,6 +16,7 @@ html {
 
 $textColor: #fff;
 $backgroundColor: rgba(0, 0, 0, 0.7);
+$mobileBackground: rgba(0, 0, 0, 0.9);
 $hoverColor: #34e3c9;
 $transition: .5s;
 $fontFamily: 'Poppins', sans-serif;
@@ -90,13 +91,71 @@ nav {
                 transition: $transition;
 
                 &:hover {
-                    transform: rotate(45deg);
+                    animation: sunRotate .8s alternate;
                 }
+
+                @keyframes sunRotate {
+
+                    0% {
+                        transform: rotate(0deg);
+                    }
+
+                    50% {
+                        transform: rotate(45deg);
+                    }
+
+                    100% {
+                        transform: rotate(0deg);
+                    }
+
+                }
+
+
             }
         }
 
         .navItem4 {
             display: none;
+
+            .navBtn {
+                cursor: pointer;
+                height: 30px;
+                width: 45px;
+                background-color: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                position: relative;
+
+                span {
+                    height: 2px;
+                    width: 100%;
+                    background-color: $textColor;
+                    transition: $transition;
+
+                    &::before,
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        background-color: $textColor;
+                        height: 2px;
+                        width: 100%;
+                        transition: $transition;
+                        border-radius: 5px;
+                    }
+
+                    &::before {
+                        top: 0;
+                        left: 0;
+                    }
+
+                    &::after {
+                        bottom: 0;
+                        left: 0;
+                    }
+                }
+            }
         }
 
         .navChild {
@@ -141,6 +200,171 @@ nav {
 
                     a.active {
                         color: $hoverColor;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            height: 1px;
+                            width: 100%;
+                            transform: translateX(-50%);
+                            left: 50%;
+                            bottom: 0;
+                            background-color: $hoverColor;
+                            transition: $transition;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .mobileNavParent {
+        transition: left $transition;
+        position: absolute;
+        left: -1500px;
+        height: 100%;
+        width: 56.5%;
+        z-index: 10000;
+        background-color: $mobileBackground;
+
+        .menuParent {
+
+            .menuTop {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                margin-top: 13px;
+                padding-bottom: 12px;
+                border-bottom: 1px solid $textColor;
+
+                div:first-child {
+                    margin-left: 8%;
+                }
+
+                .closeMobile {
+                    cursor: pointer;
+                    padding: 10px;
+                    margin-right: 8%;
+
+                    i {
+                        color: $textColor;
+                        font-size: 25px;
+                    }
+                }
+            }
+
+            .menuContent {
+                margin-top: 40px;
+
+                ul {
+                    list-style: none;
+    
+                    li {
+                        margin-top: 25px;
+                        margin-left: 5%;
+    
+                        a {
+                            color: $textColor;
+                            margin: 0 10px;
+                            padding: 0 5px;
+                            padding-bottom: 5px;
+                            font-size: 25px;
+                            letter-spacing: 1px;
+                            transition: $transition;
+                            font-family: $fontFamily;
+                            font-weight: 400;
+                            position: relative;
+    
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                height: 1px;
+                                width: 0%;
+                                transform: translateX(-50%);
+                                left: 50%;
+                                bottom: 0;
+                                background-color: $hoverColor;
+                                transition: $transition;
+                            }
+    
+                            &:hover {
+                                color: $hoverColor;
+                            }
+    
+                            &:hover::after {
+                                width: 100%;
+                            }
+                        }
+    
+                        a.active {
+                            color: $hoverColor;
+    
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                height: 1px;
+                                width: 100%;
+                                transform: translateX(-50%);
+                                left: 50%;
+                                bottom: 0;
+                                background-color: $hoverColor;
+                                transition: $transition;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .menuBottom {
+                width: 100%;
+                border-top: 1px solid $textColor;
+                margin-top: 300px;
+                padding-top: 20px;
+
+                p {
+                    color: $textColor;
+                    font-size: 20px;
+                    margin-top: 15px;
+                    margin-left: 8%;
+
+                    a {
+                        color: $textColor;
+                        transition: $transition;
+                        font-size: 25px;
+
+                        &:hover {
+                            color: $hoverColor;
+                        }
+                    }
+
+                }
+
+                .brandParent {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    align-items: center;
+
+                    .brand {
+                        height: 35px;
+                        width: 35px;
+                        border-radius: 50%;
+                        background-color: $textColor;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-align: center;
+
+                        i {
+                            color: $mobileBackground;
+                            font-size: 18px;
+                        }
+                    }
+
+                    .brand:last-child {
+                        margin-left: 10px;
                     }
                 }
             }
