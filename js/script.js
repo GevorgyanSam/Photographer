@@ -1,0 +1,2 @@
+"use strict";$((function(){const s=$(".navParent");$(window).scroll((()=>{$(window).scrollTop()>0?s.addClass("scrolled"):s.removeClass("scrolled")}));const c=$(".navItem2 a");c.click((function(){c.removeClass("active"),$(this).addClass("active")}))}));
+//# sourceMappingURL=script.js.map
