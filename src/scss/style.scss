@@ -27,17 +27,17 @@ body {
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    background-image: url(../img/DarkBackground4.jpg);
+    background-image: url(../img/DarkBackground3.jpg);
     animation: DarkBackgroundAnimation 20s infinite linear;
 
     @keyframes DarkBackgroundAnimation {
         
         0% {
-            background-image: url(../img/DarkBackground4.jpg);
+            background-image: url(../img/DarkBackground3.jpg);
         }
 
         25% {
-            background-image: url(../img/DarkBackground3.jpg);
+            background-image: url(../img/DarkBackground4.jpg);
         }
 
         50% {
@@ -49,7 +49,7 @@ body {
         }
 
         100% {
-            background-image: url(../img/DarkBackground4.jpg);
+            background-image: url(../img/DarkBackground3.jpg);
         }
 
     }
@@ -81,6 +81,20 @@ nav {
         text-align: center;
         background-color: transparent;
         transition: $transition;
+        animation: navAnim 1s forwards .5s;
+        transform: translateY(-80px);
+
+        @keyframes navAnim {
+            
+            0% {
+                transform: translateY(-80px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+
+        }
 
         .navItem3 {
 
@@ -218,13 +232,24 @@ nav {
         }
     }
 
+    .mobileNavBackground {
+        height: 100%;
+        width: 100%;
+        background-color: $backgroundColor;
+        z-index: 10000;
+        position: fixed;
+        display: none;
+        opacity: 0;
+        transition: $transition;
+    }
+
     .mobileNavParent {
-        transition: left $transition;
+        transition: $transition;
         position: absolute;
         left: -1500px;
         height: 100%;
         width: 56.5%;
-        z-index: 10000;
+        z-index: 100000;
         background-color: $mobileBackground;
 
         .menuParent {
