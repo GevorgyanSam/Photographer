@@ -8,6 +8,7 @@
 
 
 
+
 @media only screen and (max-width: 1000px) {
 
     .navParent {
@@ -149,6 +150,105 @@
 
     .mobileNavParent {
         width: 62% !important;
+    }
+
+}
+
+
+
+
+                        // HOME
+
+
+
+
+
+@media only screen and (max-width: 1200px) {
+
+    .homeParent {
+
+        .homeContent {
+
+            h3 {
+                font-size: 18px !important;
+            }
+
+            h1 {
+                font-size: 70px !important;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 840px) {
+
+    .homeParent {
+
+        .homeContent {
+
+            h3 {
+                font-size: 16px !important;
+            }
+
+            h1 {
+                font-size: 60px !important;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 610px) {
+
+    .homeParent {
+
+        .homeContent {
+
+            h3 {
+                font-size: 15px !important;
+            }
+
+            h1 {
+                font-size: 50px !important;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    .homeParent {
+
+        .homeContent {
+
+            h3 {
+                font-size: 14px !important;
+            }
+
+            h1 {
+                font-size: 35px !important;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 350px) {
+
+    .homeParent {
+
+        .homeContent {
+
+            h3 {
+                font-size: 13px !important;
+            }
+
+            h1 {
+                font-size: 30px !important;
+            }
+        }
     }
 
 }

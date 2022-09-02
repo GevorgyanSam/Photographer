@@ -2,6 +2,12 @@
 
 $(function() {
 
+
+
+// ----- ----- ----- NAVBAR ----- ----- ----- 
+
+
+
     const navParent = $(".navParent");
 
     function navBar() {

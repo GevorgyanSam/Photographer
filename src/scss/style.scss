@@ -1,18 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    text-decoration: none;
-    list-style: none;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
 
 $textColor: #fff;
 $backgroundColor: rgba(0, 0, 0, 0.7);
@@ -21,7 +8,44 @@ $hoverColor: #34e3c9;
 $transition: .5s;
 $fontFamily: 'Poppins', sans-serif;
 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    transition: $transition !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@mixin btn($fontSize, $padding) {
+
+    text-transform: uppercase;
+    font-size: $fontSize;
+    background-color: $textColor;
+    color: $mobileBackground;
+    border: none;
+    outline: none;
+    padding: $padding / 1.3 $padding;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    transition: $transition;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+
+}
+
 body {
+    user-select: none;
 
     background-repeat: no-repeat;
     background-size: cover;
@@ -391,6 +415,102 @@ nav {
                     .brand:last-child {
                         margin-left: 10px;
                     }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+                        // HOME
+
+
+
+
+#home {
+    
+    .homeParent {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 100vh;
+
+        .homeContent {
+            transform: translateY(-20%);
+            
+            h3 {
+                color: $textColor;
+                font-size: 20px;
+                font-family: sans-serif;
+                font-weight: 400;
+                letter-spacing: 1px;
+                animation: headerH3Anim 1s forwards 1.2s;
+                transform: translateY(-40px);
+                opacity: 0;
+
+                @keyframes headerH3Anim {
+
+                    0% {
+                        opacity: 0;
+                        transform: translateY(-40px);
+                    }
+
+                    100% {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+
+                }
+            }
+
+            h1 {
+                font-size: 80px;
+                font-family: arial;
+                font-weight: 400;
+                letter-spacing: 1px;
+                margin-top: 20px;
+                color: $textColor;
+                animation: headerH1Anim 1s forwards 1.6s;
+                transform: translateY(-40px);
+                opacity: 0;
+
+                @keyframes headerH1Anim {
+
+                    0% {
+                        opacity: 0;
+                        transform: translateY(-40px);
+                    }
+
+                    100% {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+
+                }
+            }
+
+            button {
+                @include btn(14px, 22px);
+                margin-top: 30px;
+                animation: headerBtnAnim 1s forwards 2s;
+                transform: translateY(-40px);
+                opacity: 0;
+
+                @keyframes headerBtnAnim {
+
+                    0% {
+                        opacity: 0;
+                        transform: translateY(-40px);
+                    }
+
+                    100% {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+
                 }
             }
         }
