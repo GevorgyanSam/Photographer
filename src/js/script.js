@@ -20,9 +20,20 @@ $(function() {
 
     }
 
+    const homeContent = $(".homeContent");
+
+    function lazyHomeContent() {
+
+        homeContent.css({
+            transform: "translateY(" + ($(window).scrollTop() * 0.35) + "px)"
+        })
+
+    }
+
     $(window).scroll(() => {
 
         navBar()
+        lazyHomeContent()
 
     })
     
@@ -95,10 +106,6 @@ $(function() {
     })
 
     mobileNavBackground.click(() => {
-
-        mobileNavParent.click(function() {
-            return false;
-        })
 
         mobileNavBackground.css({
             opacity: "0",

@@ -2,6 +2,7 @@
 
 
 $textColor: #fff;
+$secondaryTextColor: #c8c9cd;
 $backgroundColor: rgba(0, 0, 0, 0.7);
 $mobileBackground: rgba(0, 0, 0, 0.9);
 $hoverColor: #34e3c9;
@@ -436,10 +437,11 @@ nav {
         align-items: center;
         justify-content: center;
         text-align: center;
-        height: 100vh;
+        height: 110vh;
 
         .homeContent {
-            transform: translateY(-20%);
+            margin-top: -130px !important;
+            transition: 0s !important;
             
             h3 {
                 color: $textColor;
@@ -511,6 +513,113 @@ nav {
                         transform: translateY(0);
                     }
 
+                }
+            }
+        }
+    }
+}
+
+
+
+
+                        // ABOUT
+
+
+
+
+.backgroundSection {
+    width: 100%;
+    padding-top: 120px;
+    margin-top: -120px;
+
+    .backgroundDiv {
+        background-color: $backgroundColor;
+        padding: 60px;
+        margin: 0 auto;
+        max-width: 1300px;
+        border-radius: 10px;
+    }
+}
+
+.aboutParent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: start;
+
+    .aboutImgParent {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+
+    .aboutContentParent {
+        width: 55%;
+        margin-left: 5%;
+
+        h1 {
+            color: $textColor;
+            font-size: 28px;
+            margin: 5px 0;
+            font-family: sans-serif;
+        }
+
+        h2 {
+            font-size: 18px;
+            line-height: 30px;
+            letter-spacing: 1px;
+            font-family: $fontFamily;
+            margin-top: 20px;
+            color: $secondaryTextColor;
+        }
+
+        .aboutSmallParent {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            text-align: start;
+
+            .aboutSmallContent {
+                width: 100%;
+                margin-top: 30px;
+
+                h3 {
+                    color: $textColor;
+                    font-size: 22px;
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    color: $secondaryTextColor;
+                    width: 90%;
+                    font-size: 20px;
+                    line-height: 27px;
+                }
+
+                h4 {
+                    color: $secondaryTextColor;
+                    margin-top: 10px;
+                    font-size: 17px;
+                    margin-left: 20px;
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        transform: translateY(-50%);
+                        top: 50%;
+                        left: -25px;
+                        height: 8px;
+                        width: 8px;
+                        border-radius: 50%;
+                        background-color: $hoverColor;
+                    }
                 }
             }
         }
