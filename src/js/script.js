@@ -1,10 +1,26 @@
 "use strict";
 
-$(function() {
+$(document).ready(function() {
+
+
+
+    
+    $(window).scroll(() => {
+
+        navBar()
+        lazyHomeContent()
+        aboutAnimation()
+        activeLinkOnScroll()
+
+    })
+
+
 
 
 
 // ----- ----- ----- NAVBAR ----- ----- ----- 
+
+
 
 
 
@@ -19,28 +35,35 @@ $(function() {
         }
 
     }
+    
+    const links1 = $(".navItem2 a");
+    const links2 = $(".menuContent a");
 
-    const homeContent = $(".homeContent");
+    links1.click(function() {
 
-    function lazyHomeContent() {
+        links1.removeClass("active");
+        $(this).addClass("active")
 
-        homeContent.css({
-            transform: "translateY(" + ($(window).scrollTop() * 0.35) + "px)"
+        mobileNavBackground.css({
+            opacity: "0",
         })
 
-    }
+        mobileNavParent.css({
+            left: "-1500px",
+        })
 
-    $(window).scroll(() => {
+        setTimeout(function() {
 
-        navBar()
-        lazyHomeContent()
+        mobileNavBackground.css({
+            display: "none",
+        })
 
+        }, 200)
     })
-    
-    const links = $(".navItem2 a, .menuContent a");
 
-    links.click(function() {
-        links.removeClass("active");
+    links2.click(function() {
+
+        links2.removeClass("active");
         $(this).addClass("active")
 
         mobileNavBackground.css({
@@ -124,5 +147,81 @@ $(function() {
         }, 200)
 
     })
+
+    function activeLinkOnScroll() {
+
+        links1.each(function() {
+
+            let sectionOffset = $(this.hash).offset().top;
+
+            if(sectionOffset < $(window).scrollTop() + 5) {
+
+                links1.removeClass("active")
+                $(this).addClass("active")
+
+            }
+
+        })
+
+        links2.each(function() {
+            
+            let sectionOffset2 = $(this.hash).offset().top;
+
+            if(sectionOffset2 < $(window).scrollTop() + 5) {
+
+                links2.removeClass("active")
+                $(this).addClass("active")
+
+            }
+
+        })
+
+    }
+
+
+
+
+    
+// ----- ----- ----- HOME ----- ----- ----- 
+
+
+
+
+    const homeContent = $(".homeContent");
+
+    function lazyHomeContent() {
+
+        homeContent.css({
+            transform: "translateY(" + ($(window).scrollTop() * 0.35) + "px)"
+        })
+
+    }
+
+
+
+
+    
+// ----- ----- ----- ABOUT ----- ----- ----- 
+
+
+
+
+
+    function aboutAnimation() {
+
+        var about = $("#about");
+        var wScroll = $(window).scrollTop() + $(window).height();
+        var aboutAnimationParent = about.offset().top + about.height() / 2 + 100;
+
+        if(wScroll >= aboutAnimationParent) {
+
+            $(".aboutAnimationNone").css({
+                display: "block",
+            })
+
+        }
+
+    }
+
 
 })

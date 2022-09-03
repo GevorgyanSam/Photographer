@@ -45,6 +45,10 @@ html {
 
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     user-select: none;
 
@@ -541,6 +545,14 @@ nav {
     }
 }
 
+.aboutAnimation {
+    min-height: 480px;
+
+    .aboutAnimationNone {
+        display: none;  // This Will be Display: none;  (For Scroll Animation)
+    }
+}
+
 .aboutParent {
     display: flex;
     align-items: center;
@@ -556,6 +568,21 @@ nav {
         img {
             width: 100%;
             border-radius: 10px;
+            animation: aboutImageAnimation .7s forwards;
+
+            @keyframes aboutImageAnimation {
+
+                0% {
+                    transform: scale(0.0);
+                    opacity: 0;
+                }
+
+                100% {
+                    transform: scale(1.0);
+                    opacity: 1;
+                }
+
+            }
         }
     }
 
@@ -568,6 +595,23 @@ nav {
             font-size: 28px;
             margin: 5px 0;
             font-family: sans-serif;
+            animation: aboutSecondAnimation .7s forwards .3s;
+            transform: translateX(-60px);
+            opacity: 0;
+
+            @keyframes aboutSecondAnimation {
+
+                0% {
+                    transform: translateX(-60px);
+                    opacity: 0;
+                }
+
+                100% {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+
+            }
         }
 
         h2 {
@@ -577,6 +621,9 @@ nav {
             font-family: $fontFamily;
             margin-top: 20px;
             color: $secondaryTextColor;
+            animation: aboutSecondAnimation .7s forwards .3s;
+            transform: translateX(-60px);
+            opacity: 0;
         }
 
         .aboutSmallParent {
@@ -584,6 +631,48 @@ nav {
             align-items: flex-start;
             justify-content: center;
             text-align: start;
+
+            div:first-child {
+                
+                animation: aboutThirdAnimation .7s forwards .6s;
+                transform: translateX(-60px);
+                opacity: 0;
+
+                @keyframes aboutThirdAnimation {
+
+                    0% {
+                        transform: translateX(-60px);
+                        opacity: 0;
+                    }
+
+                    100% {
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
+
+                }
+            }
+
+            div:last-child {
+                
+                animation: aboutThirdAnimation .7s forwards .8s;
+                transform: translateX(-60px);
+                opacity: 0;
+
+                @keyframes aboutThirdAnimation {
+
+                    0% {
+                        transform: translateX(-60px);
+                        opacity: 0;
+                    }
+
+                    100% {
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
+
+                }
+            }
 
             .aboutSmallContent {
                 width: 100%;
