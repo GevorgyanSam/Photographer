@@ -724,10 +724,10 @@ nav {
 
 
 .portfolioAnimation {
-    // min-height: 1000px;
+    min-height: 900px;
 
     .portfolioAnimationNone {
-        // display: none;  // This Will be Display: none;  (For Scroll Animation)
+        display: none;  // This Will be Display: none;  (For Scroll Animation)
     }
 }
 
@@ -748,7 +748,7 @@ nav {
             font-size: 30px;
             letter-spacing: 1px;
             font-family: $fontFamily;
-            animation: portfolioHeaderAnimation 1s forwards .7s;
+            animation: portfolioHeaderAnimation 1s forwards .5s;
             opacity: 0;
             transform: translateY(-40px);
 
@@ -776,7 +776,7 @@ nav {
             font-weight: 400;
             margin-top: 20px;
             line-height: 33px;
-            animation: portfolioHeaderAnimation2 1s forwards 1s;
+            animation: portfolioHeaderAnimation2 1s forwards .7s;
             opacity: 0;
             transform: translateY(-40px);
 
@@ -796,7 +796,7 @@ nav {
         }
 
         .portfolioBtnParent {
-            animation: portfolioHeaderAnimation3 1s forwards 1.5s;
+            animation: portfolioHeaderAnimation3 1s forwards .9s;
             opacity: 0;
             transform: translateY(-40px);
 
@@ -869,16 +869,31 @@ nav {
 
     .portfolioImageParent {
         margin-top: 60px;
-        height: 2000px;
         display: grid;
-        grid-gap: 20px;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(8, 1fr);
+        grid-gap: 20px;
 
         .portfolioImage {
             position: relative;
             overflow: hidden;
             border-radius: 10px;
+            animation: portfolioScaleAnimation 1s forwards;
+            transform: scale(0.0);
+            opacity: 0;
+
+            @keyframes portfolioScaleAnimation {
+                
+                0% {
+                    transform: scale(0.0);
+                    opacity: 0;
+                }
+
+                100% {
+                    transform: scale(1.0);
+                    opacity: 1;
+                }
+
+            }
 
             img {
                 object-fit: cover;
@@ -922,9 +937,14 @@ nav {
             }
         }
 
+    }
+
+    .all {
+        height: 2000px;
+        grid-template-rows: repeat(8, 1fr);
+
         .portfolioImage1 {
             grid-row: 1 / span 1;
-            grid-column: 1 / span 1;
         }
 
         .portfolioImage2 {
@@ -932,12 +952,10 @@ nav {
         }
 
         .portfolioImage3 {
-            grid-column: 3 / span 1;
             grid-row: 1 / span 1;
         }
 
         .portfolioImage4 {
-            grid-column: 1 / span 1;
             grid-row: 2 / span 2;
         }
 
@@ -971,6 +989,68 @@ nav {
 
         .portfolioImage12 {
             grid-row: 6 / span 2;
+        }
+
+        .portfolioImage13 {
+            
+        }
+
+    }
+
+    .foods {
+        height: 700px;
+        grid-template-rows: repeat(3, 1fr);
+
+        .portfolioImage1 {
+            display: none;
+        }
+
+        .portfolioImage2 {
+            display: none;
+        }
+
+        .portfolioImage3 {
+            grid-row: 1 / span 2;
+        }
+
+        .portfolioImage4 {
+            display: none;
+        }
+
+        .portfolioImage5 {
+            display: none;
+        }
+
+        .portfolioImage6 {
+            grid-row: 1 / span 1;
+        }
+
+        .portfolioImage7 {
+            grid-row: 1 / span 2;
+        }
+
+        .portfolioImage8 {
+            display: none;
+        }
+
+        .portfolioImage9 {
+            display: none;
+        }
+
+        .portfolioImage10 {
+            grid-row: 2 / span 2;
+        }
+
+        .portfolioImage11 {
+            display: none;
+        }
+
+        .portfolioImage12 {
+            display: none;
+        }
+
+        .portfolioImage13 {
+            display: none;
         }
 
     }

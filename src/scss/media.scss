@@ -558,7 +558,7 @@
 
 @media only screen and (max-width: 1200px) {
 
-    .portfolioImageParent {
+    .all {
         height: 1500px !important;
     }
 
@@ -577,7 +577,7 @@
 
 @media only screen and (max-width: 700px) {
 
-    .portfolioImageParent {
+    .all {
         height: 1000px !important;
     }
 
@@ -586,12 +586,15 @@
 @media only screen and (max-width: 540px) {
 
     .portfolioImageParent {
-        height: 600px !important;
         grid-gap: 10px !important;
 
         i {
             font-size: 20px !important;
         }
+    }
+
+    .all {
+        height: 600px !important;
     }
 
 }
@@ -600,7 +603,58 @@
 
     .portfolioImageParent {
         margin-top: 40px !important;
+    }
+
+    .all {
         height: 400px !important;
+    }
+
+}
+
+@media only screen and (max-width: 1500px) {
+
+    .foods {
+        height: 600px !important;
+    }
+
+    .portfolioAnimation {
+        min-height: 800px !important;
+    }
+
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .foods {
+        height: 500px !important;
+    }
+
+    .portfolioAnimation {
+        min-height: 700px !important;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+
+    .foods {
+        height: 400px !important;
+    }
+
+    .portfolioAnimation {
+        min-height: 600px !important;
+    }
+
+}
+
+@media only screen and (max-width: 550px) {
+
+    .foods {
+        height: 300px !important;
+    }
+
+    .portfolioAnimation {
+        min-height: 500px !important;
     }
 
 }

@@ -10,6 +10,7 @@ $(document).ready(function() {
         navBar()
         lazyHomeContent()
         aboutAnimation()
+        portfolioAnimation()
         activeLinkOnScroll()
 
     })
@@ -243,6 +244,43 @@ $(document).ready(function() {
             $(this).addClass("active")
 
         })
+
+    })
+
+    function portfolioAnimation() {
+
+        var portfolio = $("#portfolio");
+        var wScroll = $(window).scrollTop() + $(window).height();
+        var portfolioAnimationParent = portfolio.offset().top + portfolio.height() / 2;
+
+        if(wScroll >= portfolioAnimationParent) {
+
+            $(".portfolioAnimationNone").css({
+                display: "block",
+            })
+
+        }
+
+    }
+
+    const all = $("#all");
+    const foods = $("#foods");
+    const drinks = $("#drinks");
+    const events = $("#events");
+    const pastries = $("#pastries");
+    const portfolioImageParent = $(".portfolioImageParent");
+
+    all.click(function() {
+
+        portfolioImageParent.removeClass("foods drinks events pastries");
+        portfolioImageParent.addClass("all")
+
+    })
+
+    foods.click(function() {
+
+        portfolioImageParent.removeClass("all drinks events pastries");
+        portfolioImageParent.addClass("foods")
 
     })
 
