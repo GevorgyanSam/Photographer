@@ -211,7 +211,7 @@ $(document).ready(function() {
 
         var about = $("#about");
         var wScroll = $(window).scrollTop() + $(window).height();
-        var aboutAnimationParent = about.offset().top + about.height() / 2 + 100;
+        var aboutAnimationParent = about.offset().top + about.height() / 2;
 
         if(wScroll >= aboutAnimationParent) {
 
