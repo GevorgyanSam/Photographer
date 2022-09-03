@@ -714,3 +714,106 @@ nav {
         }
     }
 }
+
+
+
+
+                        // PORTFOLIO
+
+
+
+
+.portfolioAnimation {
+    // min-height: 1000px;
+
+    .portfolioAnimationNone {
+        // display: none;  // This Will be Display: none;  (For Scroll Animation)
+    }
+}
+
+#portfolio {
+    margin-top: 40px;
+}
+
+.portfolioParent {
+
+    .portfolioHeader {
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        h1 {
+            color: $textColor;
+            font-size: 30px;
+            letter-spacing: 1px;
+            font-family: $fontFamily;
+        }
+
+        h2 {
+            color: $secondaryTextColor;
+            font-size: 25px;
+            margin: 0 auto;
+            width: 50%;
+            letter-spacing: 1px;
+            font-weight: 400;
+            margin-top: 20px;
+            line-height: 33px;
+        }
+
+        .portfolioBtnParent {
+
+            button {
+                background-color: transparent;
+                outline: none;
+                border: none;
+                color: $secondaryTextColor;
+                margin: 0 15px;
+                margin-top: 40px;
+                font-size: 16px;
+                text-transform: uppercase;
+                position: relative;
+                padding-bottom: 5px;
+                transition: $transition;
+                cursor: pointer;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    height: 1px;
+                    width: 0;
+                    background-color: $hoverColor;
+                    bottom: 0;
+                    transform: translateX(-50%);
+                    left: 50%;
+                    transition: $transition;
+                }
+
+                &:hover {
+                    color: $hoverColor;
+                }
+
+                &:hover::before {
+                    width: 120%;
+                }
+            }
+
+            button.active {
+                color: $hoverColor;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    height: 1px;
+                    width: 120%;
+                    background-color: $hoverColor;
+                    bottom: 0;
+                    transform: translateX(-50%);
+                    left: 50%;
+                    transition: $transition;
+                }
+            }
+        }
+    }
+
+}

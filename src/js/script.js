@@ -224,4 +224,27 @@ $(document).ready(function() {
     }
 
 
+
+
+    
+    // ----- ----- ----- PORTFOLIO ----- ----- ----- 
+    
+    
+    
+    
+    
+    const portfolioBtn = $(".portfolioBtnParent button");
+
+    portfolioBtn.each(function() {
+
+        $(this).click(function() {
+
+            portfolioBtn.removeClass("active");
+            $(this).addClass("active")
+
+        })
+
+    })
+
+
 })
