@@ -748,6 +748,23 @@ nav {
             font-size: 30px;
             letter-spacing: 1px;
             font-family: $fontFamily;
+            animation: portfolioHeaderAnimation 1s forwards .7s;
+            opacity: 0;
+            transform: translateY(-40px);
+
+            @keyframes portfolioHeaderAnimation {
+
+                0% {
+                    opacity: 0;
+                    transform: translateY(-40px);
+                }
+
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+
+            }
         }
 
         h2 {
@@ -759,9 +776,43 @@ nav {
             font-weight: 400;
             margin-top: 20px;
             line-height: 33px;
+            animation: portfolioHeaderAnimation2 1s forwards 1s;
+            opacity: 0;
+            transform: translateY(-40px);
+
+            @keyframes portfolioHeaderAnimation2 {
+
+                0% {
+                    opacity: 0;
+                    transform: translateY(-40px);
+                }
+
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+
+            }
         }
 
         .portfolioBtnParent {
+            animation: portfolioHeaderAnimation3 1s forwards 1.5s;
+            opacity: 0;
+            transform: translateY(-40px);
+
+            @keyframes portfolioHeaderAnimation3 {
+
+                0% {
+                    opacity: 0;
+                    transform: translateY(-40px);
+                }
+
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+
+            }
 
             button {
                 background-color: transparent;
@@ -814,6 +865,114 @@ nav {
                 }
             }
         }
+    }
+
+    .portfolioImageParent {
+        margin-top: 60px;
+        height: 2000px;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+
+        .portfolioImage {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+
+            img {
+                object-fit: cover;
+                object-position: 50% 50%;
+                width: 100%;
+                height: 100%;
+                transition: $transition;
+            }
+
+            span {
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                background-color: transparent;
+                transition: $transition;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+
+                i {
+                    color: transparent;
+                    font-size: 40px;
+                }
+            }
+
+            &:hover img + span {
+                background-color: rgba(0, 0, 0, 0.7);
+                cursor: pointer;
+            }
+
+            &:hover img + span i {
+                color: $textColor;
+            }
+            
+
+            &:hover img {
+                transform: scale(1.1);
+            }
+        }
+
+        .portfolioImage1 {
+            grid-row: 1 / span 1;
+            grid-column: 1 / span 1;
+        }
+
+        .portfolioImage2 {
+            grid-row: 1 / span 2;
+        }
+
+        .portfolioImage3 {
+            grid-column: 3 / span 1;
+            grid-row: 1 / span 1;
+        }
+
+        .portfolioImage4 {
+            grid-column: 1 / span 1;
+            grid-row: 2 / span 2;
+        }
+
+        .portfolioImage5 {
+            grid-row: 2 / span 2;
+        }
+
+        .portfolioImage6 {
+            grid-row: 3 / span 2;
+        }
+
+        .portfolioImage7 {
+            grid-row: 4 / span 2;
+        }
+
+        .portfolioImage8 {
+            grid-row: 5 / span 2;
+        }
+
+        .portfolioImage9 {
+            grid-row: 4 / span 2;
+        }
+
+        .portfolioImage10 {
+            grid-row: 6 / span 2;
+        }
+
+        .portfolioImage11 {
+            grid-row: 7 / span 2;
+        }
+
+        .portfolioImage12 {
+            grid-row: 6 / span 2;
+        }
+
     }
 
 }

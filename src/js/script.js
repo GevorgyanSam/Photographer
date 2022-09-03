@@ -239,7 +239,7 @@ $(document).ready(function() {
 
         $(this).click(function() {
 
-            portfolioBtn.removeClass("active");
+            portfolioBtn.removeAttr("class");
             $(this).addClass("active")
 
         })
