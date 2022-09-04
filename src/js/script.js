@@ -284,5 +284,26 @@ $(document).ready(function() {
 
     })
 
+    drinks.click(function() {
+
+        portfolioImageParent.removeClass("all foods events pastries");
+        portfolioImageParent.addClass("drinks")
+
+    })
+
+    events.click(function() {
+
+        portfolioImageParent.removeClass("all foods drinks pastries");
+        portfolioImageParent.addClass("events")
+
+    })
+
+    pastries.click(function() {
+
+        portfolioImageParent.removeClass("all foods drinks events");
+        portfolioImageParent.addClass("pastries")
+
+    })
+
 
 })
