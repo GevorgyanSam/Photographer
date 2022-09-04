@@ -1113,4 +1113,120 @@ nav {
 
     }
 
+    .events {
+        height: 700px;
+        grid-template-rows: repeat(3, 1fr);
+
+        .portfolioImage1 {
+            display: none;
+        }
+
+        .portfolioImage2 {
+            grid-row: 1 / span 2;
+        }
+
+        .portfolioImage3 {
+            grid-row: 1 / span 1;
+        }
+
+        .portfolioImage4 {
+            display: none;
+        }
+
+        .portfolioImage5 {
+            grid-row: 1 / span 2;
+        }
+
+        .portfolioImage6 {
+            grid-row: 3 / span 1;
+        }
+
+        .portfolioImage7 {
+            display: none;
+        }
+
+        .portfolioImage8 {
+            display: none;
+        }
+
+        .portfolioImage9 {
+            grid-row: 2 / span 2;
+        }
+
+        .portfolioImage10 {
+            grid-row: 3 / span 1;
+        }
+
+        .portfolioImage11 {
+            display: none;
+        }
+
+        .portfolioImage12 {
+            display: none;
+        }
+
+        .portfolioImage13 {
+            display: none;
+        }
+
+    }
+
+    .pastries {
+        height: 700px;
+        grid-template-rows: repeat(2, 1fr);
+
+        .portfolioImage1 {
+            grid-row: 1 / span 1;
+        }
+
+        .portfolioImage2 {
+            display: none;
+        }
+
+        .portfolioImage3 {
+            display: none;
+        }
+
+        .portfolioImage4 {
+            display: none;
+        }
+
+        .portfolioImage5 {
+            display: none;
+        }
+
+        .portfolioImage6 {
+            display: none;
+        }
+
+        .portfolioImage7 {
+            display: none;
+        }
+
+        .portfolioImage8 {
+            grid-row: 1 / span 2;
+        }
+
+        .portfolioImage9 {
+            display: none;
+        }
+
+        .portfolioImage10 {
+            display: none;
+        }
+
+        .portfolioImage11 {
+            grid-row: 1 / span 1;
+        }
+
+        .portfolioImage12 {
+            grid-row: 2 / span 1;
+        }
+
+        .portfolioImage13 {
+            grid-row: 2 / span 1;
+        }
+
+    }
+
 }
