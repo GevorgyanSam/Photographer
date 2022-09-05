@@ -873,3 +873,140 @@
     }
 
 }
+
+
+
+
+                        // GALLERY
+
+
+
+
+
+@media only screen and (max-width: 1500px) {
+    
+
+    #gallery {
+        margin-top: 0px !important;
+    }
+
+    .galleryParent {
+
+        .galleryHeader {
+
+            h2 {
+                width: 100% !important;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 650px) {
+
+    .galleryParent {
+
+        .galleryHeader {
+
+            h1 {
+                font-size: 25px !important;
+            }
+
+            h2 {
+                width: 100% !important;
+                font-size: 20px !important;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    .galleryParent {
+
+        .galleryHeader {
+
+            h2 {
+                margin-top: 10px !important;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
+
+    .galleryParent {
+
+        .galleryHeader {
+
+            h2 {
+                margin-top: 10px !important;
+                letter-spacing: 0 !important;
+                line-height: 25px !important;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .galleryParent {
+
+        .galleryContent {
+            height: 700px !important;
+            grid-template-columns: repeat(2, 1fr) !important;
+            grid-template-rows: repeat(3, 1fr) !important;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 720px) {
+
+    .galleryParent {
+
+        .galleryContent {
+            grid-gap: 10px !important;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 560px) {
+
+    .galleryParent {
+
+        .galleryContent {
+            display: block !important;
+            height: 100% !important;
+
+            .galleryImage {
+                margin: 20px 0 !important;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 420px) {
+
+    .galleryParent {
+
+        .galleryContent {
+
+            .galleryImage {
+                
+                span {
+
+                    p {
+                        font-size: 16px !important;
+                    }
+                }
+            }
+        }
+    }
+
+}

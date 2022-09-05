@@ -11,6 +11,7 @@ $(document).ready(function() {
         lazyHomeContent()
         aboutAnimation()
         portfolioAnimation()
+        galleryAnimation()
         activeLinkOnScroll()
 
     })
@@ -323,6 +324,33 @@ $(document).ready(function() {
         portfolioImageParent.addClass("pastries")
 
     })
+
+
+
+
+    
+    // ----- ----- ----- GALLERY ----- ----- ----- 
+    
+    
+    
+    
+    
+
+    function galleryAnimation() {
+
+        var gallery = $("#gallery");
+        var wScroll = $(window).scrollTop() + $(window).height();
+        var galleryAnimationParent = gallery.offset().top + gallery.height() / 2;
+
+        if(wScroll >= galleryAnimationParent) {
+
+            $(".galleryAnimationNone").css({
+                display: "block",
+            })
+
+        }
+
+    }
 
 
 })
