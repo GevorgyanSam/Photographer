@@ -1010,3 +1010,143 @@
     }
 
 }
+
+
+
+
+                        // SERVICES
+
+
+
+
+@media only screen and (max-width: 1500px) {
+
+    #services {
+        margin-top: 0 !important;
+    }
+
+    .servicesParent {
+
+        .servicesContent {
+
+            .servicesLogoParent {
+
+                .servicesLogoContent {
+
+                    h4 {
+                        letter-spacing: 0 !important;
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .servicesParent {
+        display: block !important;
+
+        .servicesMobileHeader {
+            display: block !important;
+        }
+
+        .servicesImg {
+            display: none !important;
+        }
+
+        .servicesContent {
+            margin: 0 !important;
+
+            h1 {
+                margin-top: 40px !important;
+            }
+
+            .servicesLogoParent {
+                margin-top: 45px !important;
+            }
+        }
+
+    }
+
+}
+
+@media only screen and (max-width: 680px) {
+
+    .servicesParent {
+
+        .servicesContent {
+
+            h1 {
+                font-size: 25px !important;
+            }
+
+            h2 {
+                font-size: 18px !important;
+                line-height: 25px !important;
+                margin-top: 10px !important;
+            }
+
+            .servicesLogoParent {
+
+                i {
+                    font-size: 30px !important;
+                }
+
+                .servicesLogoContent {
+                    margin-left: 25px !important;
+
+                    h3 {
+                        font-size: 20px !important;
+                    }
+
+                    h4 {
+                        font-size: 18px !important;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 460px) {
+
+    .servicesParent {
+
+        .servicesContent {
+
+            h1 {
+                font-size: 23px !important;
+            }
+
+            h2 {
+                font-size: 16px !important;
+                line-height: 23px !important;
+            }
+
+            .servicesLogoParent {
+                margin-top: 35px !important;
+
+                i {
+                    font-size: 25px !important;
+                }
+
+                .servicesLogoContent {
+                    margin-left: 20px !important;
+
+                    h3 {
+                        font-size: 18px !important;
+                    }
+
+                    h4 {
+                        font-size: 16px !important;
+                    }
+                }
+            }
+        }
+    }
+
+}

@@ -50,6 +50,7 @@ html {
 }
 
 body {
+    overflow-x: hidden !important;
     transition: var(--transition) !important;
     user-select: none;
     background-repeat: no-repeat;
@@ -1480,6 +1481,9 @@ nav {
 
     .servicesMobileHeader {
         display: none;
+        animation: ServicesImgAnimation .7s forwards .5s;
+        opacity: 0;
+        transform: translateX(60px);
 
         img {
             width: 100%;
@@ -1621,7 +1625,7 @@ nav {
             align-items: flex-start;
             justify-content: center;
             text-align: start;
-            margin: 35px 0;
+            margin-top: 40px;
 
             i {
                 color: var(--textColor);
