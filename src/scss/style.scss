@@ -1654,3 +1654,46 @@ nav {
         }
     }
 }
+
+
+
+
+                        // CONTACT
+
+
+
+
+.contactAnimation {
+    // min-height: 560px;
+
+    .contactAnimationNone {
+        // display: none;  // This Will be Display: none;  (For Scroll Animation)
+    }
+}
+
+#contact {
+    margin-top: 40px;
+}
+
+.contactParent {
+
+    .contactHeader {
+
+        h1 {
+            color: var(--textColor);
+            font-size: 30px;
+            letter-spacing: 1px;
+            font-family: var(--fontFamily);
+        }
+
+        h2 {
+            color: var(--secondaryTextColor);
+            font-size: 23px;
+            letter-spacing: 1px;
+            font-weight: 400;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 10px;
+            line-height: 33px;
+        }
+    }
+}
