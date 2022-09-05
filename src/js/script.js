@@ -12,6 +12,7 @@ $(document).ready(function() {
         aboutAnimation()
         portfolioAnimation()
         galleryAnimation()
+        servicesAnimation()
         activeLinkOnScroll()
 
     })
@@ -345,6 +346,33 @@ $(document).ready(function() {
         if(wScroll >= galleryAnimationParent) {
 
             $(".galleryAnimationNone").css({
+                display: "block",
+            })
+
+        }
+
+    }
+
+
+
+
+    
+    // ----- ----- ----- SERVICES ----- ----- ----- 
+    
+    
+    
+    
+    
+
+    function servicesAnimation() {
+
+        var services = $("#services");
+        var wScroll = $(window).scrollTop() + $(window).height();
+        var servicesAnimationParent = services.offset().top + services.height() / 2;
+
+        if(wScroll >= servicesAnimationParent) {
+
+            $(".servicesAnimationNone").css({
                 display: "block",
             })
 
