@@ -4,6 +4,7 @@
     --textColor: #fff;
     --secondaryTextColor: #c8c9cd;
     --backgroundColor: rgba(0, 0, 0, 0.7);
+    --contactBackgroundColor: rgba(0, 0, 0, 0.5);
     --mobileBackground: rgba(0, 0, 0, 0.9);
     --hoverColor: #34e3c9;
     --transition: .5s;
@@ -90,7 +91,8 @@ body {
 body.light {
     --textColor: #292d36;
     --secondaryTextColor: rgb(139, 131, 131);
-    --backgroundColor: rgba(255, 255, 255, 0.7);
+    --backgroundColor: rgba(255, 255, 255, 0.8);
+    --contactBackgroundColor: rgba(255, 255, 255, 0.3);
     --mobileBackground: #fff;
     --hoverColor: #32abff;
     background-image: url(../img/LightBackground1.jpg);
@@ -1664,20 +1666,38 @@ nav {
 
 
 .contactAnimation {
-    // min-height: 560px;
+    min-height: 1000px;
 
     .contactAnimationNone {
-        // display: none;  // This Will be Display: none;  (For Scroll Animation)
+        display: none;  // This Will be Display: none;  (For Scroll Animation)
     }
 }
 
 #contact {
     margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .contactParent {
 
     .contactHeader {
+        animation: ContactHeaderAnimation .7s forwards .3s;
+        opacity: 0;
+        transform: translateX(-40px);
+
+        @keyframes ContactHeaderAnimation {
+
+            0% {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+        }
 
         h1 {
             color: var(--textColor);
@@ -1694,6 +1714,146 @@ nav {
             font-family: Arial, Helvetica, sans-serif;
             margin-top: 10px;
             line-height: 33px;
+        }
+    }
+
+    .inpParentanim1 {
+        animation: ContactContentAnimation1 .7s forwards .4s;
+        opacity: 0;
+        transform: translateX(-40px);
+
+        @keyframes ContactContentAnimation1 {
+
+            0% {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+        }
+    }
+
+    .inpParentanim2 {
+        animation: ContactContentAnimation2 .7s forwards .6s;
+        opacity: 0;
+        transform: translateX(-40px);
+
+        @keyframes ContactContentAnimation2 {
+
+            0% {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+        }
+    }
+
+    .inpParentanim3 {
+        animation: ContactContentAnimation3 .7s forwards .8s;
+        opacity: 0;
+        transform: translateX(-40px);
+
+        @keyframes ContactContentAnimation3 {
+
+            0% {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+        }
+    }
+
+    .animParent4 {
+        animation: ContactContentAnimation4 .7s forwards 1s;
+        opacity: 0;
+        transform: translateX(-40px);
+
+        @keyframes ContactContentAnimation4 {
+
+            0% {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+        }
+    }
+
+    .addressContent1 {
+        animation: contactAddressAnimation1 .7s forwards 1.2s;
+        opacity: 0;
+        transform: translateX(-40px);
+
+        @keyframes contactAddressAnimation1 {
+
+            0% {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+        }
+    }
+
+    .addressContent2 {
+        animation: contactAddressAnimation2 .7s forwards 1.4s;
+        opacity: 0;
+        transform: translateX(-40px);
+
+        @keyframes contactAddressAnimation2 {
+
+            0% {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+        }
+    }
+
+    .addressContent3 {
+        animation: contactAddressAnimation3 .7s forwards 1.6s;
+        opacity: 0;
+        transform: translateX(-40px);
+
+        @keyframes contactAddressAnimation3 {
+
+            0% {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
         }
     }
 
@@ -1795,7 +1955,7 @@ nav {
                         position: absolute;
                         height: 12px;
                         width: 2px;
-                        transform: rotate(30deg);
+                        transform: rotate(32deg);
                         background-color: transparent;
                         left: 10px;
                         top: 2px;
@@ -1885,6 +2045,120 @@ nav {
                     font-family: sans-serif;
                     margin-top: 10px;
                 }
+            }
+        }
+    }
+
+    .followParent {
+        margin-top: 50px;
+
+        h1 {
+            color: var(--textColor);
+            text-align: center;
+            font-family: var(--fontFamily);
+            font-size: 30px;
+            letter-spacing: 1px;
+            animation: contactFollowAnimation1 .7s forwards 1.8s;
+            opacity: 0;
+            transform: translateY(-40px);
+
+            @keyframes contactFollowAnimation1 {
+
+                0% {
+                    opacity: 0;
+                    transform: translateY(-40px);
+                }
+
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+
+            }
+        }
+
+        .followGridParent {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            grid-gap: 20px;
+            width: 100%;
+            position: relative;
+            margin-top: 40px;
+            animation: contactFollowAnimation2 .7s forwards 2s;
+            opacity: 0;
+            transform: translateY(-40px);
+
+            @keyframes contactFollowAnimation2 {
+
+                0% {
+                    opacity: 0;
+                    transform: translateY(-40px);
+                }
+
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+
+            }
+
+            div {
+                border-radius: 10px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: 50% 50%;
+                    transform: scale(1.1);
+                }
+            }
+
+            .btnParent {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                background-color: var(--contactBackgroundColor);
+
+                button {
+                    @include btn(16px, 17px);
+                    transition: var(--transition);
+
+                    i {
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+
+        p {
+            color: var(--secondaryTextColor);
+            text-align: center;
+            font-size: 17px;
+            font-family: arial;
+            letter-spacing: 1px;
+            margin-top: 45px;
+            animation: contactFollowAnimation3 .7s forwards 2.2s;
+            opacity: 0;
+            transform: translateY(-40px);
+
+            @keyframes contactFollowAnimation3 {
+
+                0% {
+                    opacity: 0;
+                    transform: translateY(-40px);
+                }
+
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+
             }
         }
     }
