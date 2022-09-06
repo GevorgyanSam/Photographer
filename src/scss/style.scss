@@ -1696,4 +1696,196 @@ nav {
             line-height: 33px;
         }
     }
+
+    .contactContentParent {
+        margin-top: 20px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        text-align: start;
+
+        .messageParent {
+            width: 70%;
+            font-family: var(--fontFamily);
+
+            .gridParent {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+            }
+
+            .inputParent {
+                position: relative;
+                margin-top: 20px;
+
+                #forFirstName,
+                #forLastName,
+                #forEmail,
+                #forSubject,
+                #forMessage {
+                    transition: .1s;
+                    position: absolute;
+                    color: var(--secondaryTextColor);
+                    font-size: 18px;
+                    left: 5px;
+                    top: 15px;
+                }
+
+                #firstName,
+                #lastName,
+                #email,
+                #subject {
+                    border: none;
+                    outline: none;
+                    height: 50px;
+                    width: 350px;
+                    padding-left: 5px;
+                    color: var(--textColor);
+                    background-color: transparent;
+                    border-bottom: 1px solid var(--secondaryTextColor);
+                    transition: .1s;
+                }
+
+                #message {
+                    border: none;
+                    outline: none;
+                    resize: none;
+                    height: 150px;
+                    width: 765px;
+                    padding-left: 5px;
+                    color: var(--textColor);
+                    background-color: transparent;
+                    border-bottom: 1px solid var(--secondaryTextColor);
+                    margin-top: 20px;
+                    transition: .1s;
+                }
+            }
+
+            .checkBoxParent {
+                margin-top: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+
+                #policy {
+                    -webkit-appearance: none;
+                    height: 20px;
+                    width: 20px;
+                    border: 1px solid var(--secondaryTextColor);
+                    border-radius: 2px;
+                    cursor: pointer;
+                    position: relative;
+                    overflow: hidden;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        height: 10px;
+                        width: 2px;
+                        transform: rotate(-30deg);
+                        background-color: transparent;
+                        left: 5px;
+                        top: 5px;
+                        border-radius: 50px;
+                        transition: var(--transition);
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        height: 12px;
+                        width: 2px;
+                        transform: rotate(30deg);
+                        background-color: transparent;
+                        left: 10px;
+                        top: 2px;
+                        border-radius: 50px;
+                        transition: var(--transition);
+                    }
+
+                    &:checked {
+                        background-color: var(--hoverColor);
+                        border: 1px solid transparent;
+
+                        &::before,
+                        &::after {
+                            background-color: black;
+                        }
+                    }
+                }
+
+                #policy + label {
+                    color: var(--secondaryTextColor);
+                    font-size: 16px;
+                    margin-left: 10px;
+
+                    span {
+                        color: var(--hoverColor);
+                        cursor: pointer;
+                        position: relative;
+                        
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            height: 1px;
+                            width: 0;
+                            transform: translateX(-50%);
+                            left: 50%;
+                            bottom: -1px;
+                            background-color: var(--hoverColor);
+                            transition: var(--transition);
+                        }
+
+                        &:hover::before {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            .submitParent {
+                input {
+                    margin-top: 40px;
+                    @include btn(14px, 16px)
+                }
+            }
+        }
+
+        .addressParent {
+            width: 30%;
+
+            .addressContent {
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                text-align: start;
+                margin-top: 35px;
+
+                .addressText {
+                    margin-left: 30px;
+                    margin-top: -5px;
+                }
+
+                i {
+                    color: var(--textColor);
+                    font-size: 30px;
+                }
+
+                h4 {
+                    color: var(--textColor);
+                    font-family: var(--fontFamily);
+                    font-size: 20px;
+                    font-weight: 400;
+                }
+
+                p {
+                    line-height: 26px;
+                    color: var(--secondaryTextColor);
+                    font-size: 16px;
+                    font-family: sans-serif;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
 }

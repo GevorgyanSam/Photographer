@@ -13,6 +13,7 @@ $(document).ready(function() {
         portfolioAnimation()
         galleryAnimation()
         servicesAnimation()
+        contactAnimation()
         activeLinkOnScroll()
 
     })
@@ -379,6 +380,452 @@ $(document).ready(function() {
         }
 
     }
+
+
+
+
+    
+    // ----- ----- ----- CONTACT ----- ----- ----- 
+    
+    
+    
+    
+    
+
+    function contactAnimation() {
+
+        var contact = $("#contact");
+        var wScroll = $(window).scrollTop() + $(window).height();
+        var contactAnimationParent = contact.offset().top + contact.height() / 2;
+
+        if(wScroll >= contactAnimationParent) {
+
+            $(".contactAnimationNone").css({
+                display: "block",
+            })
+
+        }
+
+    }
+
+    function contactFocus() {
+
+        const firstName = $("#firstName")
+        const lastName = $("#lastName")
+        const email = $("#email")
+        const subject = $("#subject")
+        const message = $("#message")
+        const forFirstName = $("#forFirstName")
+        const forLastName = $("#forLastName")
+        const forEmail = $("#forEmail")
+        const forSubject = $("#forSubject")
+        const forMessage = $("#forMessage")
+
+        firstName.focus(function() {
+
+            if(theme.hasClass("fa-moon")) {
+
+                firstName.css({
+                    borderBottom: "1px solid #34e3c9"
+                })
+
+                forFirstName.css({
+                    left: "0px",
+                    top: "-10px",
+                    fontSize: "14px",
+                })
+
+            }
+
+        })
+
+        firstName.blur(function() {
+
+            if(theme.hasClass("fa-moon")) {
+
+                if(firstName.val() == "") {
+
+                    firstName.css({
+                        borderBottom: "1px solid #c8c9cd"
+                    })
+    
+                    forFirstName.css({
+                        left: "5px",
+                        top: "15px",
+                        fontSize: "18px",
+                    })
+
+                }
+
+            }
+
+        })
+
+        lastName.focus(function() {
+
+            if(theme.hasClass("fa-moon")) {
+
+                lastName.css({
+                    borderBottom: "1px solid #34e3c9"
+                })
+
+                forLastName.css({
+                    left: "0px",
+                    top: "-10px",
+                    fontSize: "14px",
+                })
+
+            }
+
+        })
+
+        lastName.blur(function() {
+
+            if(theme.hasClass("fa-moon")) {
+
+                if(lastName.val() == "") {
+                    
+                    lastName.css({
+                        borderBottom: "1px solid #c8c9cd"
+                    })
+    
+                    forLastName.css({
+                        left: "5px",
+                        top: "15px",
+                        fontSize: "18px",
+                    })
+
+                }
+
+            }
+
+        })
+
+        email.focus(function() {
+
+            if(theme.hasClass("fa-moon")) {
+
+                email.css({
+                    borderBottom: "1px solid #34e3c9"
+                })
+
+                forEmail.css({
+                    left: "0px",
+                    top: "-10px",
+                    fontSize: "14px",
+                })
+
+            }
+
+        })
+
+        email.blur(function() {
+
+            if(theme.hasClass("fa-moon")) {
+
+                if(email.val() == "") {
+
+                    email.css({
+                        borderBottom: "1px solid #c8c9cd"
+                    })
+    
+                    forEmail.css({
+                        left: "5px",
+                        top: "15px",
+                        fontSize: "18px",
+                    })
+
+                }
+
+            }
+
+        })
+
+        subject.focus(function() {
+
+            if(theme.hasClass("fa-moon")) {
+
+                subject.css({
+                    borderBottom: "1px solid #34e3c9"
+                })
+
+                forSubject.css({
+                    left: "0px",
+                    top: "-10px",
+                    fontSize: "14px",
+                })
+
+            }
+
+        })
+
+        subject.blur(function() {
+
+            if(theme.hasClass("fa-moon")) {
+
+                if(subject.val() == "") {
+
+                    subject.css({
+                        borderBottom: "1px solid #c8c9cd"
+                    })
+    
+                    forSubject.css({
+                        left: "5px",
+                        top: "15px",
+                        fontSize: "18px",
+                    })
+
+                }
+
+            }
+
+        })
+
+        message.focus(function() {
+
+            if(theme.hasClass("fa-moon")) {
+
+                message.css({
+                    borderBottom: "1px solid #34e3c9"
+                })
+
+                forMessage.css({
+                    left: "0px",
+                    top: "-10px",
+                    fontSize: "14px",
+                })
+
+            }
+
+        })
+
+        message.blur(function() {
+
+            if(theme.hasClass("fa-moon")) {
+
+                if(message.val() == "") {
+
+                    message.css({
+                        borderBottom: "1px solid #c8c9cd"
+                    })
+    
+                    forMessage.css({
+                        left: "5px",
+                        top: "15px",
+                        fontSize: "18px",
+                    })
+
+                }
+
+            }
+
+        })
+
+        firstName.focus(function() {
+
+            if(theme.hasClass("fa-sun")) {
+
+                firstName.css({
+                    borderBottom: "1px solid #32abff"
+                })
+
+                forFirstName.css({
+                    left: "0px",
+                    top: "-10px",
+                    fontSize: "14px",
+                })
+
+            }
+
+        })
+
+        firstName.blur(function() {
+
+            if(theme.hasClass("fa-sun")) {
+
+                if(firstName.val() == "") {
+
+                    firstName.css({
+                        borderBottom: "1px solid rgb(139, 131, 131)"
+                    })
+    
+                    forFirstName.css({
+                        left: "5px",
+                        top: "15px",
+                        fontSize: "18px",
+                    })
+
+                }
+
+            }
+
+        })
+
+        lastName.focus(function() {
+
+            if(theme.hasClass("fa-sun")) {
+
+                lastName.css({
+                    borderBottom: "1px solid #32abff"
+                })
+
+                forLastName.css({
+                    left: "0px",
+                    top: "-10px",
+                    fontSize: "14px",
+                })
+
+            }
+
+        })
+
+        lastName.blur(function() {
+
+            if(theme.hasClass("fa-sun")) {
+
+                if(lastName.val() == "") {
+                    
+                    lastName.css({
+                        borderBottom: "1px solid rgb(139, 131, 131)"
+                    })
+    
+                    forLastName.css({
+                        left: "5px",
+                        top: "15px",
+                        fontSize: "18px",
+                    })
+
+                }
+
+            }
+
+        })
+
+        email.focus(function() {
+
+            if(theme.hasClass("fa-sun")) {
+
+                email.css({
+                    borderBottom: "1px solid #32abff"
+                })
+
+                forEmail.css({
+                    left: "0px",
+                    top: "-10px",
+                    fontSize: "14px",
+                })
+
+            }
+
+        })
+
+        email.blur(function() {
+
+            if(theme.hasClass("fa-sun")) {
+
+                if(email.val() == "") {
+
+                    email.css({
+                        borderBottom: "1px solid rgb(139, 131, 131)"
+                    })
+    
+                    forEmail.css({
+                        left: "5px",
+                        top: "15px",
+                        fontSize: "18px",
+                    })
+
+                }
+
+            }
+
+        })
+
+        subject.focus(function() {
+
+            if(theme.hasClass("fa-sun")) {
+
+                subject.css({
+                    borderBottom: "1px solid #32abff"
+                })
+
+                forSubject.css({
+                    left: "0px",
+                    top: "-10px",
+                    fontSize: "14px",
+                })
+
+            }
+
+        })
+
+        subject.blur(function() {
+
+            if(theme.hasClass("fa-sun")) {
+
+                if(subject.val() == "") {
+
+                    subject.css({
+                        borderBottom: "1px solid rgb(139, 131, 131)"
+                    })
+    
+                    forSubject.css({
+                        left: "5px",
+                        top: "15px",
+                        fontSize: "18px",
+                    })
+
+                }
+
+            }
+
+        })
+
+        message.focus(function() {
+
+            if(theme.hasClass("fa-sun")) {
+
+                message.css({
+                    borderBottom: "1px solid #32abff"
+                })
+
+                forMessage.css({
+                    left: "0px",
+                    top: "-10px",
+                    fontSize: "14px",
+                })
+
+            }
+
+        })
+
+        message.blur(function() {
+
+            if(theme.hasClass("fa-sun")) {
+
+                if(message.val() == "") {
+
+                    message.css({
+                        borderBottom: "1px solid rgb(139, 131, 131)"
+                    })
+    
+                    forMessage.css({
+                        left: "5px",
+                        top: "15px",
+                        fontSize: "18px",
+                    })
+
+                }
+
+            }
+
+        })
+
+    }
+
+    
+
+    contactFocus()
 
 
 })

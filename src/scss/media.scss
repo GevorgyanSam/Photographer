@@ -1150,3 +1150,215 @@
     }
 
 }
+
+
+
+
+                        // CONTACT
+
+
+
+
+@media only screen and (max-width: 1500px) {
+
+    .contactParent {
+
+        .contactHeader {
+
+            h1 {
+                font-size: 28px !important;
+            }
+
+            h2 {
+                font-size: 20px !important;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .contactParent {
+
+        .contactHeader {
+
+            h1 {
+                font-size: 25px !important;
+            }
+
+            h2 {
+                font-size: 18px !important;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 580px) {
+
+    .contactParent {
+
+        .contactHeader {
+
+            h1 {
+                font-size: 23px !important;
+            }
+
+            h2 {
+                font-size: 16px !important;
+                line-height: 25px !important;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 1500px) {
+
+    .contactParent {
+
+        .contactContentParent {
+
+            .messageParent {
+
+                #firstName,
+                #lastName,
+                #email,
+                #subject {
+                    width: 250px !important;
+                }
+
+                #message {
+                    width: 565px !important;
+                }
+            }
+
+            .addressParent {
+
+                .addressContent {
+                    margin-top: 30px !important;
+
+                    i {
+                        font-size: 25px !important;
+                    }
+
+                    p {
+                        margin-top: 8px;
+                        line-height: 25px !important;
+                        font-size: 15px !important;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .contactParent {
+
+        .contactContentParent {
+            display: block !important;
+
+            .messageParent,
+            .addressParent {
+                width: 100% !important;
+            }
+
+            .messageParent {
+
+                #firstName,
+                #lastName,
+                #email,
+                #subject {
+                    width: 290px !important;
+                }
+
+                #message {
+                    width: 635px !important;
+                }
+
+            }
+
+            .addressParent {
+                margin-top: 60px !important;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .contactParent {
+
+        .contactContentParent {
+
+            .messageParent {
+
+                #firstName,
+                #lastName,
+                #email,
+                #subject,
+                #message {
+                    width: 100% !important;
+                }
+
+                .inputParent {
+                    margin-top: 30px !important;
+                }
+
+                .gridParent {
+                    display: block !important;
+                }
+
+            }
+
+            .addressParent {
+                margin-top: 60px !important;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 300px) {
+
+    .contactParent {
+
+        .contactContentParent {
+
+            .messageParent {
+
+                .checkBoxParent {
+
+                    #policy + label {
+                        font-size: 14px !important;
+                    }
+                }
+
+            }
+
+            .addressParent {
+                
+                .addressContent {
+
+
+                    .addressText {
+                        margin-left: 20px !important;
+                    }
+
+                    p {
+                        line-height: 25px !important;
+                        margin-top: 8px !important;
+                        font-size: 14px !important;
+                    }
+                }
+
+            }
+        }
+    }
+
+}
