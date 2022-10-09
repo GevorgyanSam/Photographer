@@ -190,12 +190,12 @@ $(document).ready(function() {
         if(theme.hasClass("fa-moon")) {
             theme.removeClass("fa-moon")
             theme.addClass("fa-sun")
-            logo.attr("src", "C:/Users/User/Desktop/Photographer/img/logo-light.png")
+            logo.attr("src", "img/logo-light.png")
             $("body").addClass("light")
         } else if (theme.hasClass("fa-sun")) {
             theme.removeClass("fa-sun")
             theme.addClass("fa-moon")
-            logo.attr("src", "C:/Users/User/Desktop/Photographer/img/logo.png")
+            logo.attr("src", "img/logo.png")
             $("body").removeAttr("class")
         }
 
