@@ -58,32 +58,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    background-image: url(../img/DarkBackground3.jpg);
-    animation: DarkBackgroundAnimation 20s infinite linear;
-
-    @keyframes DarkBackgroundAnimation {
-        
-        0% {
-            background-image: url(../img/DarkBackground3.jpg);
-        }
-
-        25% {
-            background-image: url(../img/DarkBackground4.jpg);
-        }
-
-        50% {
-            background-image: url(../img/DarkBackground2.jpg);
-        }
-
-        75% {
-            background-image: url(../img/DarkBackground1.jpg);
-        }
-
-        100% {
-            background-image: url(../img/DarkBackground3.jpg);
-        }
-
-    }
+    background-image: url(../img/DarkBackground4.jpg);
 }
 
 
@@ -95,32 +70,7 @@ body.light {
     --contactBackgroundColor: rgba(255, 255, 255, 0.3);
     --mobileBackground: #fff;
     --hoverColor: #32abff;
-    background-image: url(../img/LightBackground1.jpg);
-    animation: LightBackgroundAnimation 20s infinite linear;
-
-    @keyframes LightBackgroundAnimation {
-        
-        0% {
-            background-image: url(../img/LightBackground1.jpg);
-        }
-
-        25% {
-            background-image: url(../img/LightBackground2.jpg);
-        }
-
-        50% {
-            background-image: url(../img/LightBackground3.jpg);
-        }
-
-        75% {
-            background-image: url(../img/LightBackground4.jpg);
-        }
-
-        100% {
-            background-image: url(../img/LightBackground1.jpg);
-        }
-
-    }
+    background-image: url(../img/LightBackground4.jpg);
 
     .navParent .navChild ul li a {
         font-weight: 600;
